@@ -5,9 +5,11 @@
 ## Что умеет
 
 - **Уровни A0–C1.** От пары слов в реплике до почти полного погружения. Плюс ползунок «поменьше / побольше».
+- **Устойчивые выражения и сочетания** 💜, а не только отдельные слова. Подбираются под уровень: на A1 это «j'ai faim», «faire les courses», «à tout à l'heure», на B2 уже образные идиомы. Если буквальный смысл другой, он показан в скобках. Отключается галочкой.
+- **Мат и грубый сленг** 🌶 (18+, по галочке, по умолчанию выключено). Настоящие ругательства и уличный сленг, а не учебные «ой-ой», с пометкой, насколько это грубо. Когда галочка снята, сленг не попадает в карточки и персонажи его не используют.
 - **Перевод в трёх видах:** мелко над словом, всплывающая подсказка или размытый перевод, который открывается по нажатию.
 - **Нажми на слово** — карточка с переводом, озвучкой 🔊 и кнопками «в словарик» и «знаю ✓».
-- **Словарик** с поиском, фильтрами, контекстом (из какой фразы и от какого персонажа слово), правкой и удалением.
+- **Словарик** с поиском, фильтрами (слова, выражения, сленг, исправления), контекстом (из какой фразы и от какого персонажа слово), правкой и удалением.
 - **Карточки** с интервальным повторением: «помню» — слово уходит на 1, 2, 4, 7, 14 дней, после пятого раза считается выученным.
 - **Исправления.** Пишешь персонажу на изучаемом языке с ошибкой — в конце ответа появится плашка ✎ с правильным вариантом и объяснением.
 - **Персонажи учатся вместе с тобой.** Выученные слова уходят в инструкцию как «можно без перевода», а те, что учишь, — как «повтори при случае».
@@ -48,7 +50,7 @@
 
 ## Как это устроено
 
-Расширение добавляет в промпт короткую инструкцию (её можно посмотреть кнопкой «Посмотреть инструкцию»). Модель отмечает слова так: `[[la pluie|дождь]]`, исправления так: `[[!je suis allée|объяснение]]`. Расширение превращает эти пометки в красивые слова с переводом. Пока ответ печатается в режиме стриминга, пометки видны «сырыми» — после окончания генерации они превращаются в слова с переводом.
+Расширение добавляет в промпт короткую инструкцию (её можно посмотреть кнопкой «Посмотреть инструкцию»). Модель отмечает слова так: `[[la pluie|дождь]]`, выражения так: `[[+avoir faim|быть голодным]]`, сленг так: `[[#putain|блин — грубо]]`, исправления так: `[[!je suis allée|объяснение]]`. Расширение превращает эти пометки в красивые слова с переводом. Пока ответ печатается в режиме стриминга, пометки видны «сырыми» — после окончания генерации они превращаются в слова с переводом.
 
 Хорошо работает с Claude, Gemini, GPT и другими крупными моделями. Маленькие локальные модели могут путаться с форматом — тогда увеличь глубину вставки инструкции до 0.
 
@@ -60,6 +62,6 @@
 
 ## English
 
-Mots Doux makes your characters weave words of the language you're learning into their replies, shows the translation right above each word, collects every word into a personal dictionary and reviews it with spaced-repetition flashcards. Learned words are fed back to the model so characters use them untranslated, and words you're learning get reused. Install by putting the `SillyTavern-MotsDoux` folder into `SillyTavern/data/default-user/extensions/` and reloading, or via **Install extension** with a GitHub URL. Commands: `/md-dict`, `/md-cards`, `/md-level <A0–C1>`, `/md-toggle`.
+Mots Doux makes your characters weave words of the language you're learning into their replies, shows the translation right above each word, collects every word into a personal dictionary and reviews it with spaced-repetition flashcards. Besides single words it teaches level-appropriate set expressions and collocations, and — opt-in, 18+ — real swear words and crude slang. Learned words are fed back to the model so characters use them untranslated, and words you're learning get reused. Install by putting the `SillyTavern-MotsDoux` folder into `SillyTavern/data/default-user/extensions/` and reloading, or via **Install extension** with a GitHub URL. Commands: `/md-dict`, `/md-cards`, `/md-level <A0–C1>`, `/md-toggle`.
 
 License: MIT.

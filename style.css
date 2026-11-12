@@ -247,3 +247,55 @@
     width: auto;
     padding: 4px 12px;
 }
+
+/* ------------------------------------------ expressions and slang (1.1) --- */
+
+:root {
+    --md-phrase: #a993f5;
+    --md-phrase-soft: rgba(169, 147, 245, 0.18);
+    --md-slang: #ff9a5c;
+    --md-slang-soft: rgba(255, 154, 92, 0.18);
+}
+
+.mes_text .md-word.md-kind-phrase {
+    color: var(--md-phrase);
+    border-bottom: 2px solid var(--md-phrase);
+}
+
+.mes_text .md-word.md-kind-phrase:hover { background-color: var(--md-phrase-soft); }
+
+.mes_text .md-word.md-kind-slang {
+    color: var(--md-slang);
+    border-bottom: 1px dashed var(--md-slang);
+}
+
+.mes_text .md-word.md-kind-slang:hover { background-color: var(--md-slang-soft); }
+
+.mes_text .md-word.md-known.md-kind-phrase,
+.mes_text .md-word.md-known.md-kind-slang { color: inherit; }
+
+.md-tag {
+    display: inline-block;
+    font-size: 0.75em;
+    padding: 0 7px;
+    border-radius: 8px;
+    border: 1px solid currentColor;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin: 2px 6px 2px 0;
+}
+
+.md-tag-phrase { color: var(--md-phrase); }
+.md-tag-slang { color: var(--md-slang); }
+.md-popover .md-tag { margin-top: 4px; }
+
+.md-row.is-phrase { border-left: 3px solid var(--md-phrase); }
+.md-row.is-slang { border-left: 3px solid var(--md-slang); }
+.md-row.is-phrase .md-row-term { color: var(--md-phrase); }
+.md-row.is-slang .md-row-term { color: var(--md-slang); }
+
+/* Long translations must not stretch the word underneath. */
+.mes_text ruby.md-ruby {
+    ruby-align: center;
+    white-space: nowrap;
+}
